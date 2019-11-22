@@ -14,12 +14,16 @@
 </head>
 
 <body>
+        <button onclick="F1()">Load</button>
+        <button onclick="F2()">Run</button>
 
 
     <canvas id="b" width="369" height="363"></canvas>
 
     <script>
 
+function F1()
+{
         // Определение контекста рисования
         a = document.getElementById("b");
         c = a.getContext("2d");
@@ -35,7 +39,10 @@
 
         // Загружаем файл изображения
         img.src = "2.bmp";
+}
 
+function F2()
+{
         for (var x=0;x<=369;x++)
         {
             for (var y=0;y<=363;y++)
@@ -48,7 +55,7 @@
             console.log(r,g,b); 
         }
         }
-
+}
 
     </script>
 </body>
