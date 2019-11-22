@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    canvas {
+      
+    }
+    </style>
+</head>
+
+<body>
+
+
+    <canvas id="b" width="369" height="363"></canvas>
+
+    <script>
+
+        // Определение контекста рисования
+        b = document.getElementById("b");
+        c = b.getContext("2d");
+
+        // Создаем объект изображения
+        var img = new Image();
+
+        // Привязываем функцию к событию onload
+        // Это указывает браузеру, что делать, когда изображение загружено
+        img.onload = function () {
+            c.drawImage(img, 0, 0);
+        };
+
+        // Загружаем файл изображения
+        img.src = "2.bmp";
+        for (var x=0;x<=369;x++)
+        {
+            for (var y=0;y<=363;y++){
+            var imgData=c.getImageData(x,y,1,1).data;
+            var r=imgData[0];
+            //var g=imgData[1];
+            console.log(r); 
+        }
+        }
+
+
+    </script>
+</body>
+
+</html>
