@@ -48,6 +48,18 @@
                     var g = imgData[1];
                     var b = imgData[2];
 
+                    var p = c.createImageData(1,1);
+
+                    p.data[0]=255-r;
+                    p.data[1]=255-g;
+                    p.data[2]=255-b;
+                    
+                    p.data[3]=255;
+
+
+                    c.putImageData(p,x,y);
+
+
                     // console.log(r,g,b); 
                     if ((r == 255) && (g == 255) && (b == 255)) {
                         w++;
