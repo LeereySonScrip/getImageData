@@ -39,7 +39,7 @@
         }
 
         function F2() {
-            var w;
+            var w = 0;
             var f;
             for (var x = 0; x <= 369; x++) {
                 for (var y = 0; y <= 363; y++) {
@@ -49,14 +49,14 @@
                     var b = imgData[2];
 
                     //console.log(r,g,b); 
-                    if ((r == 255)&&(g==255)&&(b==255)) {
+                    if ((r == 255) && (g == 255) && (b == 255)) {
                         w++;
                     }
-                   
+
                 }
             }
 
-console.log(w,369*363-w); 
+            console.log(w, 369 * 363 - w);
 
         }
 
